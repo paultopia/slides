@@ -51,7 +51,7 @@ Weight| Wheels | Engine? | Vehicle?
 -- 
 
 - Legal reasoning as function
-  - (engine: yes, weight: 95lbs, wheels: 4) -> (vehicle: yes)
+  - engine: yes, weight: 95lbs, wheels: 4 -> vehicle: yes
 
 ---
 
@@ -82,11 +82,25 @@ Weight| Wheels | Engine? | Vehicle?
 
 - Following and distinguishing cases as feature selection
 
-  - Prosecutor says the space separates nicely on weight, everthing over 90 pounds is a vehicle.
+  - Prosecutor says the space separates nicely on weight, everything over 90 pounds is a vehicle.
   
 --
 
   - Defendant introduces a column for things that go "woof" to distinguish the St. Bernard/separate the space differently.
+
+---
+
+# Problem 2: Innovation and Novelty
+
+- Any model you can construct classifies everything made of metal with 4 wheels as a vehicle
+  - Then someone shows up in a wheelchair. 
+  - If this is truly novel, we need a judge to integrate equity/common-law innovation.
+
+---
+
+# Integrating ML with Doctrine
+
+- Classifiers typically don't produce "vehicle" or "not vehicle, they produce P(Vehicle).
 
 ---
 class: center, middle
