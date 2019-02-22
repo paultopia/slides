@@ -13,10 +13,14 @@
         font-family: 'Yanone Kaffeesatz';
         font-weight: normal;
       }
+      img {
+      max-height: 90%;
+      max-width: 90%;
+      }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       .img50 img {
       width: 50%;
-      height: 50%
+      height: 50%;
       }
     </style>
   </head>
@@ -39,6 +43,8 @@ class: center, middle
 ---
 class: center, middle
 
+## Vehicles in the Park: A Dataset
+
 Weight| Wheels | Engine? | Vehicle?
 ------|------- | --------|---------
 5     | 3      | T       | T
@@ -47,7 +53,7 @@ Weight| Wheels | Engine? | Vehicle?
 
 ---
 
-# Law as Machine Learning
+## Law as Machine Learning
 
 - Machine learning as function approximation 
   - *Classification*: find the function embedded in the head of a human mapping features to label
@@ -59,21 +65,21 @@ Weight| Wheels | Engine? | Vehicle?
 
 ---
 
-# We've trained computers to make this legal judgment
+## We've trained computers to make this legal judgment
 
 .center[![Street signs are law](captcha.jpeg)]
 
 ---
 
-# Separating feature-space
+## Separating Feature-Space
 
 .img50[.center[![OLS Plane, qua example](plane.png)]]
 
 ---
-# Problem 1: defining the features
+## Problem 1: defining the features
 
-- Machine learning on structured datasets
-  - someone has to decide what columns to put in
+- Machine learning on structured datasets.
+  - someone has to decide what columns to put in the dataset.
 
 --
 
@@ -82,9 +88,9 @@ Weight| Wheels | Engine? | Vehicle?
 
 ---
 
-# Solution to Problem 1: Legal argumentation(!!)
+## Solution to Problem 1: Legal argumentation(!!)
 
-- Following and distinguishing cases as feature selection
+- Following and distinguishing cases as feature selection.
 
   - Prosecutor says the space separates nicely on weight, everything over 90 pounds is a vehicle.
   
@@ -94,17 +100,50 @@ Weight| Wheels | Engine? | Vehicle?
 
 ---
 
-# Problem 2: Innovation and Novelty
+## Problem 2: Innovation and Novelty
 
-- Any model you can construct classifies everything made of metal with 4 wheels as a vehicle
+- Any model you can construct classifies everything made of metal with 4 wheels as a vehicle.
+
+--
+
   - Then someone shows up in a wheelchair. 
   - If this is truly novel, we need a judge to integrate equity/common-law innovation.
 
 ---
 
-# Integrating ML with Doctrine
+## Integrating ML with Doctrine
 
 - Classifiers typically don't produce "vehicle" or "not vehicle, they produce P(Vehicle).
+  - There's no natural law that says P(Vehicle) > .5 --> Vehicle. Can choose arbitrary thresholds.
+
+--
+
+- Rule of lenity --> increase the threshold for classifying acts as criminal?
+
+---
+
+## Bias and Variance
+
+- Fundamental ML tradeoff: capture all your data or generalize to unseen observations? 
+
+.center[![Overfitting](overfitting.jpeg)]
+
+(overfitting illustration swiped from statisticsbyjim.com)
+
+---
+
+## Bias and Variance
+
+- Fundamental ML tradeoff: capture all your data or generalize to unseen observations? 
+- Parallel in problems like clearly established for §1983 qualified immunity.
+  - Could ML set clearly established threshold? 
+  - Could such a model be used to force existing doctrine to stop overfitting?
+
+---
+
+## Legal Cognition Ain't Just Cognition
+
+.center[.middle[Most of what lawyers do isn't fitting law to facts. Legal cognitions are integrated with social functions that we don't know how to automate. But maybe we can use machine learning as a precision tool.]]
 
 ---
 class: center, middle
